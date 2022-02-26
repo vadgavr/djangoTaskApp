@@ -15,6 +15,7 @@ def about(request):
 
 
 def create(request):
+    error = ''
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
